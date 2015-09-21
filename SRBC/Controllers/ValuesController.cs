@@ -28,14 +28,12 @@ namespace SRBC.Controllers
         {
             SendGridMessage myMessage = new SendGridMessage();
             myMessage.AddTo("Contact@Savannahriverbrew.com");
-            myMessage.AddCc("steve.ellison@savannahriverbrew.com");
-            myMessage.AddCc("david.ellison@savannahriverbrew.com");
             myMessage.From = new MailAddress(value);
             myMessage.Subject = "Wants to be added to mailing list";
             myMessage.Text = value +", would like to be added the Savannah River Brewing Company mailing list.";
             var credentials = new NetworkCredential("SRBCMail", "Password123!");
             var transportWeb = new Web(credentials);
-            //transportWeb.DeliverAsync(myMessage);
+            transportWeb.DeliverAsync(myMessage);
         }
 
         // PUT api/values/5
