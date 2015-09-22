@@ -200,9 +200,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\main.js" />
+    <Content Include="app\viewmodels\ageCheckModal.js" />
+    <Content Include="app\viewmodels\beerModal.js" />
+    <Content Include="app\viewmodels\contactModal.js" />
     <Content Include="app\viewmodels\shell.js" />
     <Content Include="app\viewmodels\subscribeModal.js" />
     <Content Include="app\viewmodels\welcome.js" />
+    <Content Include="app\views\ageCheckModal.html" />
+    <Content Include="app\views\beerModal.html" />
+    <Content Include="app\views\contactModal.html" />
     <Content Include="app\views\shell.html" />
     <Content Include="app\views\subscribeModal.html" />
     <Content Include="app\views\welcome.html" />

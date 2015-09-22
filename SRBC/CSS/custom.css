@@ -10,6 +10,23 @@
 	MAIN
 ------------------------------*/
 
+
+.iframe-rwd {
+    position: relative;
+    padding-bottom: 40%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+    .iframe-rwd iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 body {
     font-family: 'font', sans-serif;
     padding-top: 30px;
@@ -217,7 +234,8 @@ h2 {
     padding-bottom: 30px;
 }
 
-.modal-center{}
+.modal-center {
+}
 
 .modal {
     overflow: hidden;
@@ -659,4 +677,3 @@ span.has-error {
     .popover-error.bottom > .arrow:after {
         border-bottom-color: #a94442 !important;
     }
-

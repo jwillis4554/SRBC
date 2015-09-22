@@ -1,56 +1,6 @@
-﻿define(['durandal/app', 'knockout', 'bootstrap', 'vegas', 'timeCircles', './subscribeModal'],
-    function (app, ko, boot, vegas, timeCircles,CustomModal) {
-        $(window).resize(function () {
-            $("#DateCountdown").TimeCircles().rebuild();
-        });
-
-        var ageCheck = function () {
-            var ageVerified = checkAgeCookie();
-            if (!ageVerified) {
-                $('#AgeCheck').on('show.bs.modal', function () {
-                    var t = $(this),
-                        d = t.find('.modal-dialog'),
-                        dh = d.data('height'),
-                        w = $(window).width(),
-                        h = $(window).height();
-                    // if it is desktop & dialog is lower than viewport
-                    // (set your own values)
-                    if (w > 380 && (dh + 60) < h) {
-                        d.css('margin-top', Math.round(0.96 * (h - dh) / 2));
-                    } else {
-                        d.css('margin-top', '');
-                    }
-                });
-
-                $('#AgeCheck').modal({
-                    keyboard: false,
-                    show: true,
-                    backdrop: 'static',
-                });
-                $('#AgeCheck').data('bs.modal').$backdrop.css('background-color', 'white');
-                $("#AgeCheckYes").click(function () {
-                    self.setAgeCookie("SRBC", "AgeVerify", 90);
-                    $('#AgeCheck').modal("hide");
-                });
-
-                $("#AgeCheckNo").click(function () {
-                    $("#ageCheckTitle").html("Thank you for visiting");
-                    $("#ageCheckMessage").html("We look forward to providing you with delicious beer <br/> When you are of legal age.");
-                    $("#AgeCheckYes").hide();
-                    $("#AgeCheckNo").hide();
-                });
-            }
-        }
-
-
-        var setAgeCookie = function (cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires;
-        }
-
-        var checkAgeCookie = function () {
+﻿define(['durandal/app', 'knockout', 'bootstrap', 'vegas', 'timeCircles', './subscribeModal', './contactModal', './beerModal', './ageCheckModal'],
+    function (app, ko, boot, vegas, timeCircles, subscribeModal, contactModal, beerModal, ageCheckModal) {
+        var retrieveAgeValidationCookie = function () {
             return getCookie("SRBC") != "";
         }
 
@@ -65,38 +15,33 @@
             return "";
         }
 
+        $(window).resize(function () {
+            $("#DateCountdown").TimeCircles().rebuild();
+        });
+
+
         return {
 
             signMeUp: function () {
-                CustomModal.show().then(function (response) {
+                subscribeModal.show().then(function (response) {
                 });
             },
-
+            contact: function () {
+                contactModal.show().then(function (response) {
+                });
+            },
+            beer: function () {
+                beerModal.show().then(function (response) {
+                });
+            },
             activate: function () {
-                var self = this;
-
+                var ageValidated = retrieveAgeValidationCookie();
+                if (!ageValidated) {
+                    ageCheckModal.show().then(function () {
+                    });
+                }
             },
             bindingComplete: function () {
-                'use strict';
-                var self = this;
-                $('.modal').each(function () {
-                    var t = $(this),
-                        d = t.find('.modal-dialog'),
-                        fadeClass = (t.is('.fade') ? 'fade' : '');
-                    // render dialog
-                    t.removeClass('fade')
-                        .addClass('invisible')
-                        .css('display', 'block');
-                    // read and store dialog height
-                    d.data('height', d.height());
-                    // hide dialog again
-                    t.css('display', '')
-                        .removeClass('invisible')
-                        .addClass(fadeClass);
-                });
-
-                ageCheck();
-
                 $("body").vegas({
                     transition: 'fade',
                     delay: 7000,
@@ -109,7 +54,6 @@
                     ],
                     overlay: 'plugins/vegas/overlays/06.png'
                 });
-
 
                 $("#DateCountdown").TimeCircles({
                     "animation": "ticks",
@@ -139,33 +83,6 @@
                         }
                     }
                 });
-
-                $("#contact").on("shown.bs.modal", function () {
-                    google.maps.event.trigger(map, "resize");
-                    map.setCenter(myLatlng);
-                });
-
-
-                var myLatlng = new google.maps.LatLng(33.465343, -81.962797);
-                var mapOptions = {
-                    zoom: 14,
-                    center: myLatlng,
-                    navigationControl: false,
-                    mapTypeControl: false,
-                    scaleControl: false,
-                    draggable: true,
-                    scrollwheel: false
-                }
-
-                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: "Savannah River Brewing Company"
-                });
-
-
             }
         }
     });

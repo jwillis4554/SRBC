@@ -25,7 +25,11 @@
     }
 });
 
-
+define('gmaps', ['async!http://maps.google.com/maps/api/js?sensor=false'],
+    function () {
+        console.log('Google maps loaded');
+        return window.google.maps;
+    });
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/bootstrapDialog', 'knockout', "koValidation", "toastr"], function (system, app, viewLocator, bsDialog, ko, koValidation, toastr) {
     //>>excludeStart("build", true);

@@ -1,0 +1,28 @@
+﻿
+    <div class="modal-dialog">
+        <div class="modal-body">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8" style="text-align: center;">
+                            <h2 data-bind="text: modalTitle"></h2>
+                            <p><span data-bind="html: description"></span></p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8" style="text-align: center;">
+                            <button type="submit" data-bind="click: agreeAgeValidation,visible: noSelection" class="btn btn-submit">Yes</button>
+                            <button type="submit" data-bind="click: rejectAgeValidation,visible: noSelection" class="btn btn-submit">No</button>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
