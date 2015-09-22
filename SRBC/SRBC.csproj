@@ -191,7 +191,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -199,6 +199,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\main.js" />
+    <Content Include="app\viewmodels\shell.js" />
+    <Content Include="app\viewmodels\subscribeModal.js" />
+    <Content Include="app\viewmodels\welcome.js" />
+    <Content Include="app\views\shell.html" />
+    <Content Include="app\views\subscribeModal.html" />
+    <Content Include="app\views\welcome.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -269,6 +276,55 @@
     <Content Include="Images\SRBC Black &amp; White Logo %281%29.png" />
     <Content Include="Images\SRBCColorLogo.png" />
     <Content Include="index.html" />
+    <Content Include="lib\durandal\js\plugins\bootstrapDialog.js" />
+    <Content Include="Scripts\jquery-1.11.2.js" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\durandal\css\durandal.css" />
+    <Content Include="lib\durandal\img\icon.png" />
+    <Content Include="lib\durandal\img\ios-startup-image-landscape.png" />
+    <Content Include="lib\durandal\img\ios-startup-image-portrait.png" />
+    <Content Include="lib\durandal\js\activator.js" />
+    <Content Include="lib\durandal\js\app.js" />
+    <Content Include="lib\durandal\js\binder.js" />
+    <Content Include="lib\durandal\js\composition.js" />
+    <Content Include="lib\durandal\js\events.js" />
+    <Content Include="lib\durandal\js\plugins\dialog.js" />
+    <Content Include="lib\durandal\js\plugins\history.js" />
+    <Content Include="lib\durandal\js\plugins\http.js" />
+    <Content Include="lib\durandal\js\plugins\observable.js" />
+    <Content Include="lib\durandal\js\plugins\router.js" />
+    <Content Include="lib\durandal\js\plugins\serializer.js" />
+    <Content Include="lib\durandal\js\plugins\widget.js" />
+    <Content Include="lib\durandal\js\system.js" />
+    <Content Include="lib\durandal\js\transitions\entrance.js" />
+    <Content Include="lib\durandal\js\viewEngine.js" />
+    <Content Include="lib\durandal\js\viewLocator.js" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="lib\jquery\jquery-1.9.1.intellisense.js" />
+    <Content Include="lib\jquery\jquery-1.9.1.js" />
+    <Content Include="lib\jquery\jquery-1.9.1.min.js" />
+    <Content Include="lib\knockout\knockout-3.1.0.debug.js" />
+    <Content Include="lib\knockout\knockout-3.1.0.js" />
+    <Content Include="lib\require\almond-custom.js" />
+    <Content Include="lib\require\r.js" />
+    <Content Include="lib\require\require.js" />
+    <Content Include="lib\require\text.js" />
     <Content Include="plugins\vegas\js\vegas.min.js.map" />
     <Content Include="Fonts\fontawesome-webfont.woff2" />
     <Content Include="Fonts\fontawesome-webfont.woff" />
@@ -297,6 +353,16 @@
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="lib\jquery\jquery-1.9.1.min.map" />
     <None Include="Properties\PublishProfiles\SavannahRiverBrewing.pubxml" />
     <Content Include="plugins\creative-brands\creative-brands.css" />
     <Content Include="plugins\creative-brands\creative-brands.js" />
@@ -323,13 +389,7 @@
     <Content Include="plugins\vegas\overlays\15.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Custom\custom.js" />
-    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.map" />
-    <Content Include="Scripts\jquery-ui-1.11.4.js" />
-    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -337,8 +397,15 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\knockout-3.3.0.debug.js" />
     <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
@@ -354,12 +421,19 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\knockout.validation.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SRBCHelper\SRBCHelper.csproj">
+      <Project>{B0ACE8A8-4960-4DDA-BBB1-A585F0D3A4CE}</Project>
+      <Name>SRBCHelper</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -594,3 +594,69 @@ address {
         height: 0px;
     }
 }
+
+
+
+/* has-error adjustments*/
+.has-error.form-control-static {
+    color: #a94442;
+}
+
+span.has-error {
+    color: #a94442;
+}
+
+.has-error .form-control .select2-choice {
+    border-color: #a94442;
+}
+
+    .has-error .form-control .select2-choice:focus {
+        outline: thin dotted;
+        outline: 5px auto #a94442;
+        outline-offset: -2px;
+    }
+
+.has-error .select2-container .select2-choice .select2-arrow {
+    color: #a94442;
+    background: #f2dede;
+    border-color: #a94442;
+}
+
+.has-error .form-control:focus {
+    border-color: rgb(169, 68, 66);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, .6);
+    outline: thin dotted;
+    outline: 5px auto #a94442;
+    outline-offset: -2px;
+}
+
+
+/* Error popover styles */
+.popover-error {
+    border-color: #a94442;
+    background-color: #a94442;
+    color: #fff;
+    z-index: 1020; /* below nav bar */
+}
+
+    .popover-error .arrow {
+    }
+
+    .popover-error.right > .arrow:after {
+        border-right-color: #a94442 !important;
+    }
+
+    .popover-error.left > .arrow:after {
+        border-left-color: #a94442 !important;
+    }
+
+    .popover-error.top > .arrow:after {
+        border-top-color: #a94442 !important;
+    }
+
+    .popover-error.bottom > .arrow:after {
+        border-bottom-color: #a94442 !important;
+    }
+
