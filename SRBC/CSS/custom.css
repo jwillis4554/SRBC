@@ -11,30 +11,12 @@
 ------------------------------*/
 
 
-.iframe-rwd {
-    position: relative;
-    padding-bottom: 40%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-
-    .iframe-rwd iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
 body {
     font-family: 'font', sans-serif;
     padding-top: 30px;
 }
 
-.smallTrademark {
-    font-size: 50%;
-}
+
 
 h1 {
     display: none;
@@ -143,12 +125,61 @@ h2 {
 /*------------------------------
 	COUNTDOWN
 ------------------------------*/
-
-#DateCountdown {
+.countdown > div > #DateCountdown {
     width: 500px;
     height: 125px;
     color: #FFF;
     margin: 0 auto;
+    margin-bottom: 7%;
+}
+
+/*------------------------------
+	Responsive Iframe
+------------------------------*/
+
+
+
+.iframe-rwd {
+    position: relative;
+    padding-bottom: 40%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+    .iframe-rwd iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+/*------------------------------
+    Logo ITEMS
+------------------------------*/
+
+.mainLogoArea {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+        padding-left:0;
+    padding-right: 0;
+}
+
+    .mainLogoArea > div > img {
+        display: inline;
+    }
+
+.smallTrademark {
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: .8em;
 }
 
 /*------------------------------
@@ -677,3 +708,13 @@ span.has-error {
     .popover-error.bottom > .arrow:after {
         border-bottom-color: #a94442 !important;
     }
+
+
+
+.noPaddeing {
+    padding: 0 !important;
+}
+
+.smallText {
+    font-size: 50%;
+}

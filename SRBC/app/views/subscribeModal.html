@@ -1,41 +1,36 @@
-﻿    <div class="modal-dialog">
-        <div class="modal-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12" style="margin-bottom: 10px;">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8" style="text-align: center;">
-                            <img src="Images/savannahRiverLogo2.png" class="img-responsive" alt="Savannah River Brewing Company Logo" style="max-height: 10em" />
-                        </div>
-                        <div class="col-md-2"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div>
+﻿<div class="modal-dialog autoclose">
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="margin-bottom: 10px;">
+                    <img src="/Images/savannahRiverLogo2.png" class="img-responsive" alt="Savannah River Brewing Company Logo" style="max-height: 10em" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-3 col-sm-3 col-xs-5">
+                    <img src="/Images/icon1.png" class="img-responsive" alt="Savannah River Brewing Company Contact Us" />
+                </div>
+                <div class="subscribe-wrap text-left">
+                    <div class="col-md-6 col-sm-7 col-xs-7">
+                        <p>If you would like to stay up to date on the happenings at <br /> Savannah River Brewing Company, please sign up!</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-1"></div>
-                    <div class="col-md-2 col-sm-3 col-xs-3">
-                        <img src="Images/icon1.png" class="img-responsive" alt="Savannah River Brewing Company Contact Us" />
-                    </div>
-                    <div class="subscribe-wrap" style="text-align: left">
-                        <div class="col-md-6 col-sm-3 col-xs-7">
-                            <p>If you would like to stay up to date on the happenings at <br /> Savannah River Brewing Company, please sign up!</p>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-3 col-xs-1"></div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-5 center-block">
-                        <form class="form-inline" data-bind="validationElement: vm().Email">
-                            <div class="form-group col-xs-9">
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-4 col-sm-12 col-xs-12">
+                    <form data-bind="validationElement: vm().Email">
+                        <div class="form-group">
+                            <div class="col-sm-8">
                                 <input type="text" class="form-control" data-bind="value: vm().Email" placeholder="Email Address" />
                             </div>
-                            <div class="form-group col-xs-3"><button type="button" data-bind="click: SubmitEmail" class=" btn btn-submit">Sign Me Up</button></div>
-                        </form>
-                    </div>
-
-                    <div class="col-md-3"></div>
+                        </div>
+                        <button type="button" data-bind="click: SubmitEmail" class=" btn btn-submit">Sign Me Up</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>

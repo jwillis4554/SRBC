@@ -46,7 +46,8 @@
                     transition: 'fade',
                     delay: 7000,
                     transitionDuration: 5000,
-                    preload: true,
+                    preload: false,
+                    timer:false,
                     slides: [
                         { src: 'Images/background.jpg' },
                     { src: 'Images/background1.jpg' },
