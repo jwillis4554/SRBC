@@ -35,8 +35,5 @@
         $(parent).parent().css("margin-top", "15%");
     }
 
-    constructor.prototype.canDeactivate=function(){
-    }
-
     return constructor;
 });
