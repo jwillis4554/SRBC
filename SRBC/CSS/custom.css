@@ -126,11 +126,11 @@ h2 {
 	COUNTDOWN
 ------------------------------*/
 .countdown > div > #DateCountdown {
-    width: 500px;
     height: 125px;
     color: #FFF;
     margin: 0 auto;
     margin-bottom: 7%;
+    max-width: 500px;
 }
 
 /*------------------------------
@@ -166,7 +166,7 @@ h2 {
     margin-bottom: 2em;
     margin-left: 0;
     margin-right: 0;
-        padding-left:0;
+    padding-left: 0;
     padding-right: 0;
 }
 
@@ -716,5 +716,10 @@ span.has-error {
 }
 
 .smallText {
+    font-size: 50%;
+}
+
+.tradeMarkSpan {
+    vertical-align: text-top;
     font-size: 50%;
 }
